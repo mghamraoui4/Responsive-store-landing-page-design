@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUMIÈRE — Premium Store</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Google Fonts: Playfair Display + DM Sans -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       HEADER / NAVIGATION
+  ============================================================ -->
+  <header id="home">
+
+    <!-- Top announcement bar -->
+    <div class="announcement-bar py-2 text-center">
+      <small>✦ Free shipping on orders over $75 &nbsp;|&nbsp; New arrivals every Friday ✦</small>
+    </div>
+
+    <!-- Main navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+      <div class="container">
+
+        <!-- Brand / Logo -->
+        <a class="navbar-brand" href="#home">
+          <span class="brand-text">LUMIÈRE</span>
+        </a>
+
+        <!-- Mobile toggle button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="bi bi-list fs-4"></i>
+        </button>
+
+        <!-- Nav links -->
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav mx-auto gap-lg-4">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#products">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Nav actions (cart + search) -->
+          <div class="nav-actions d-flex align-items-center gap-3 mt-3 mt-lg-0">
+            <button class="icon-btn" aria-label="Search">
+              <i class="bi bi-search"></i>
+            </button>
+            <button class="icon-btn position-relative" aria-label="Cart">
+              <i class="bi bi-bag"></i>
+              <!-- Cart badge -->
+              <span class="cart-badge">3</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="container position-relative z-1 h-100 d-flex align-items-center">
+        <div class="row">
+          <div class="col-lg-7 col-md-9">
+            <!-- Eyebrow label -->
+            <p class="hero-eyebrow">New Collection — Spring 2025</p>
+
+            <!-- Main headline -->
+            <h1 class="hero-title">
+              Crafted for<br />
+              <em>Those Who</em><br />
+              Dare to Shine
+            </h1>
+
+            <!-- Sub-text -->
+            <p class="hero-sub">
+              Discover curated pieces where minimalism meets bold character.
+              Every item is a statement waiting to be worn.
+            </p>
+
+            <!-- CTA buttons -->
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a href="#products" class="btn btn-primary-custom">
+                Explore Collection
+                <i class="bi bi-arrow-right ms-2"></i>
+              </a>
+              <a href="#about" class="btn btn-outline-custom">
+                Our Story
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+  </header>
+
+
+  <!-- ============================================================
+       STATS / TRUST BAR
+  ============================================================ -->
+  <section class="stats-bar py-4">
+    <div class="container">
+      <div class="row text-center g-3">
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <span class="stat-number">12K+</span>
+            <span class="stat-label">Happy Clients</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <span class="stat-number">340+</span>
+            <span class="stat-label">Products</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <span class="stat-number">98%</span>
+            <span class="stat-label">Satisfaction</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Countries</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       PRODUCT SECTION
+  ============================================================ -->
+  <section id="products" class="products-section py-5">
+    <div class="container">
+
+      <!-- Section header -->
+      <div class="section-header text-center mb-5">
+        <p class="section-eyebrow">Curated Selection</p>
+        <h2 class="section-title">Featured Products</h2>
+        <p class="section-sub">Hand-picked for quality, style, and timeless appeal.</p>
+      </div>
+
+      <!-- Filter tabs (Bootstrap Nav) -->
+      <div class="d-flex justify-content-center mb-5">
+        <ul class="nav filter-tabs" id="filterTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="filter-tab active" data-bs-toggle="tab" data-bs-target="#all">All</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="filter-tab" data-bs-toggle="tab" data-bs-target="#new">New In</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="filter-tab" data-bs-toggle="tab" data-bs-target="#sale">Sale</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="row g-4">
+
+        <!-- ── Product Card 1 ── -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="product-card">
+            <!-- Badge -->
+            <span class="product-badge new">New</span>
+
+            <!-- Image wrapper -->
+            <div class="product-img-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=80"
+                alt="Minimalist Watch"
+                class="product-img"
+                loading="lazy"
+              />
+              <!-- Quick-add overlay -->
+              <div class="product-overlay">
+                <button class="overlay-btn"><i class="bi bi-heart"></i></button>
+                <button class="overlay-btn"><i class="bi bi-eye"></i></button>
+              </div>
+            </div>
+
+            <!-- Card body -->
+            <div class="product-body">
+              <p class="product-category">Accessories</p>
+              <h3 class="product-name">Minimalist Watch</h3>
+              <p class="product-desc">Swiss quartz movement, sapphire crystal glass, 40mm case.</p>
+              <div class="product-footer">
+                <span class="product-price">$249.00</span>
+                <a href="#" class="btn btn-shop">
+                  Shop Now <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Product Card 2 ── -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="product-card">
+            <!-- Badge -->
+            <span class="product-badge sale">–20%</span>
+
+            <div class="product-img-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80"
+                alt="Running Sneakers"
+                class="product-img"
+                loading="lazy"
+              />
+              <div class="product-overlay">
+                <button class="overlay-btn"><i class="bi bi-heart"></i></button>
+                <button class="overlay-btn"><i class="bi bi-eye"></i></button>
+              </div>
+            </div>
+
+            <div class="product-body">
+              <p class="product-category">Footwear</p>
+              <h3 class="product-name">Running Sneakers</h3>
+              <p class="product-desc">Lightweight mesh upper, responsive foam sole for all-day comfort.</p>
+              <div class="product-footer">
+                <span class="product-price">
+                  $119.00
+                  <small class="old-price">$149.00</small>
+                </span>
+                <a href="#" class="btn btn-shop">
+                  Shop Now <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Product Card 3 ── -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&q=80"
+                alt="Leather Tote Bag"
+                class="product-img"
+                loading="lazy"
+              />
+              <div class="product-overlay">
+                <button class="overlay-btn"><i class="bi bi-heart"></i></button>
+                <button class="overlay-btn"><i class="bi bi-eye"></i></button>
+              </div>
+            </div>
+
+            <div class="product-body">
+              <p class="product-category">Bags</p>
+              <h3 class="product-name">Leather Tote Bag</h3>
+              <p class="product-desc">Full-grain Italian leather, brass hardware, magnetic closure.</p>
+              <div class="product-footer">
+                <span class="product-price">$189.00</span>
+                <a href="#" class="btn btn-shop">
+                  Shop Now <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Product Card 4 ── -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="product-card">
+            <span class="product-badge new">New</span>
+
+            <div class="product-img-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1586495777744-4e6232bf4aff?w=600&q=80"
+                alt="Silk Scarf"
+                class="product-img"
+                loading="lazy"
+              />
+              <div class="product-overlay">
+                <button class="overlay-btn"><i class="bi bi-heart"></i></button>
+                <button class="overlay-btn"><i class="bi bi-eye"></i></button>
+              </div>
+            </div>
+
+            <div class="product-body">
+              <p class="product-category">Accessories</p>
+              <h3 class="product-name">Silk Scarf</h3>
+              <p class="product-desc">100% pure silk, hand-rolled edges, versatile 90×90 cm size.</p>
+              <div class="product-footer">
+                <span class="product-price">$95.00</span>
+                <a href="#" class="btn btn-shop">
+                  Shop Now <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Product Card 5 ── -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="product-card">
+            <span class="product-badge sale">–15%</span>
+
+            <div class="product-img-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=600&q=80"
+                alt="Parfum Collection"
+                class="product-img"
+                loading="lazy"
+              />
+              <div class="product-overlay">
+                <button class="overlay-btn"><i class="bi bi-heart"></i></button>
+                <button class="overlay-btn"><i class="bi bi-eye"></i></button>
+              </div>
+            </div>
+
+            <div class="product-body">
+              <p class="product-category">Fragrance</p>
+              <h3 class="product-name">Parfum Élite</h3>
+              <p class="product-desc">Woody oriental notes, 50 ml Eau de Parfum, long-lasting.</p>
+              <div class="product-footer">
+                <span class="product-price">
+                  $127.00
+                  <small class="old-price">$149.00</small>
+                </span>
+                <a href="#" class="btn btn-shop">
+                  Shop Now <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Product Card 6 ── -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1560343090-f0409e92791a?w=600&q=80"
+                alt="Canvas Sneakers"
+                class="product-img"
+                loading="lazy"
+              />
+              <div class="product-overlay">
+                <button class="overlay-btn"><i class="bi bi-heart"></i></button>
+                <button class="overlay-btn"><i class="bi bi-eye"></i></button>
+              </div>
+            </div>
+
+            <div class="product-body">
+              <p class="product-category">Footwear</p>
+              <h3 class="product-name">Canvas Sneakers</h3>
+              <p class="product-desc">Organic cotton canvas, natural rubber sole, unisex design.</p>
+              <div class="product-footer">
+                <span class="product-price">$89.00</span>
+                <a href="#" class="btn btn-shop">
+                  Shop Now <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Product Card 7 ── -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="product-card">
+            <span class="product-badge new">New</span>
+
+            <div class="product-img-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&q=80"
+                alt="Gold Necklace"
+                class="product-img"
+                loading="lazy"
+              />
+              <div class="product-overlay">
+                <button class="overlay-btn"><i class="bi bi-heart"></i></button>
+                <button class="overlay-btn"><i class="bi bi-eye"></i></button>
+              </div>
+            </div>
+
+            <div class="product-body">
+              <p class="product-category">Jewelry</p>
+              <h3 class="product-name">Gold Necklace</h3>
+              <p class="product-desc">18K gold-plated sterling silver, delicate chain, 45 cm.</p>
+              <div class="product-footer">
+                <span class="product-price">$75.00</span>
+                <a href="#" class="btn btn-shop">
+                  Shop Now <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Product Card 8 ── -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="product-card">
+            <span class="product-badge sale">–30%</span>
+
+            <div class="product-img-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=600&q=80"
+                alt="Classic Loafers"
+                class="product-img"
+                loading="lazy"
+              />
+              <div class="product-overlay">
+                <button class="overlay-btn"><i class="bi bi-heart"></i></button>
+                <button class="overlay-btn"><i class="bi bi-eye"></i></button>
+              </div>
+            </div>
+
+            <div class="product-body">
+              <p class="product-category">Footwear</p>
+              <h3 class="product-name">Classic Loafers</h3>
+              <p class="product-desc">Genuine suede, leather lining, cushioned insole for comfort.</p>
+              <div class="product-footer">
+                <span class="product-price">
+                  $139.00
+                  <small class="old-price">$199.00</small>
+                </span>
+                <a href="#" class="btn btn-shop">
+                  Shop Now <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /row -->
+
+      <!-- View all CTA -->
+      <div class="text-center mt-5">
+        <a href="#" class="btn btn-primary-custom">
+          View All Products
+          <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       PROMO BANNER
+  ============================================================ -->
+  <section class="promo-banner py-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-md-8">
+          <p class="promo-label">Limited Time Offer</p>
+          <h2 class="promo-title">Up to <span>40% Off</span><br />Summer Essentials</h2>
+          <p class="promo-sub">Use code <strong>LUMIERE40</strong> at checkout. Offer ends Sunday.</p>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <a href="#products" class="btn btn-promo">
+            Claim Offer <i class="bi bi-tag ms-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       ABOUT / BRAND STORY
+  ============================================================ -->
+  <section id="about" class="about-section py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <!-- Image column -->
+        <div class="col-md-5">
+          <div class="about-img-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80"
+              alt="Our boutique store"
+              class="about-img"
+              loading="lazy"
+            />
+            <!-- Floating card -->
+            <div class="about-float-card">
+              <i class="bi bi-award fs-2 mb-1"></i>
+              <p class="mb-0"><strong>Est. 2015</strong></p>
+              <small>A decade of elegance</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text column -->
+        <div class="col-md-7">
+          <p class="section-eyebrow">Who We Are</p>
+          <h2 class="section-title">Style is a<br /><em>Language We Speak</em></h2>
+          <p class="about-text">
+            LUMIÈRE was born from a simple belief: that everyday objects should inspire joy.
+            We work directly with artisans and designers across the globe to bring you pieces
+            that are made to last — in craft and in culture.
+          </p>
+          <p class="about-text">
+            Every product in our store passes a rigorous curation process. We only stock items
+            we'd be proud to give as a gift or wear ourselves.
+          </p>
+
+          <!-- Feature list -->
+          <ul class="about-features mt-4">
+            <li><i class="bi bi-check-circle-fill"></i> Ethically sourced materials</li>
+            <li><i class="bi bi-check-circle-fill"></i> Free returns within 30 days</li>
+            <li><i class="bi bi-check-circle-fill"></i> Expert customer support 24/7</li>
+            <li><i class="bi bi-check-circle-fill"></i> Secure, encrypted checkout</li>
+          </ul>
+
+          <a href="#products" class="btn btn-primary-custom mt-4">
+            Shop the Collection <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       TESTIMONIALS
+  ============================================================ -->
+  <section class="testimonials-section py-5">
+    <div class="container">
+
+      <div class="section-header text-center mb-5">
+        <p class="section-eyebrow">Customer Reviews</p>
+        <h2 class="section-title">What Our Clients Say</h2>
+      </div>
+
+      <!-- Bootstrap Carousel -->
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <div class="col-md-8 col-lg-6">
+                <div class="testimonial-card text-center">
+                  <div class="stars mb-3">★★★★★</div>
+                  <p class="testimonial-quote">
+                    "The watch I ordered exceeded every expectation. The packaging alone felt like
+                    receiving a gift. I'll be a customer for life."
+                  </p>
+                  <img
+                    src="https://i.pravatar.cc/60?img=12"
+                    alt="Sophie L."
+                    class="testimonial-avatar"
+                  />
+                  <strong>Sophie L.</strong>
+                  <small class="d-block text-muted">Paris, France</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-md-8 col-lg-6">
+                <div class="testimonial-card text-center">
+                  <div class="stars mb-3">★★★★★</div>
+                  <p class="testimonial-quote">
+                    "Fast shipping, beautiful quality. The leather tote bag is even more stunning in
+                    person. My colleagues keep asking where I got it!"
+                  </p>
+                  <img
+                    src="https://i.pravatar.cc/60?img=47"
+                    alt="Marcus T."
+                    class="testimonial-avatar"
+                  />
+                  <strong>Marcus T.</strong>
+                  <small class="d-block text-muted">New York, USA</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-md-8 col-lg-6">
+                <div class="testimonial-card text-center">
+                  <div class="stars mb-3">★★★★★</div>
+                  <p class="testimonial-quote">
+                    "LUMIÈRE curates pieces that feel intentional and thoughtful. The silk scarf is
+                    a treasure I'll pass on someday."
+                  </p>
+                  <img
+                    src="https://i.pravatar.cc/60?img=32"
+                    alt="Aisha M."
+                    class="testimonial-avatar"
+                  />
+                  <strong>Aisha M.</strong>
+                  <small class="d-block text-muted">Dubai, UAE</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Carousel controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-icon"><i class="bi bi-chevron-left"></i></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-icon"><i class="bi bi-chevron-right"></i></span>
+        </button>
+
+      </div><!-- /carousel -->
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       NEWSLETTER
+  ============================================================ -->
+  <section class="newsletter-section py-5">
+    <div class="container">
+      <div class="newsletter-card">
+        <div class="row align-items-center g-4">
+          <div class="col-md-6">
+            <p class="section-eyebrow" style="color: var(--gold)">Stay in the Loop</p>
+            <h2 class="newsletter-title">Get Early Access &<br />Exclusive Offers</h2>
+            <p class="newsletter-sub">
+              Join 12,000+ subscribers who get first look at new arrivals and private sales.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <!-- Newsletter form -->
+            <form class="newsletter-form" onsubmit="handleSubscribe(event)">
+              <div class="input-group newsletter-input-group">
+                <input
+                  type="email"
+                  class="form-control newsletter-input"
+                  placeholder="Your email address"
+                  required
+                  aria-label="Email for newsletter"
+                />
+                <button class="btn btn-gold" type="submit">
+                  Subscribe <i class="bi bi-send ms-1"></i>
+                </button>
+              </div>
+              <small class="newsletter-disclaimer">
+                <i class="bi bi-shield-lock me-1"></i>
+                No spam, unsubscribe anytime.
+              </small>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer id="footer" class="main-footer pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Brand column -->
+        <div class="col-lg-4 col-md-6">
+          <a href="#home" class="footer-brand">LUMIÈRE</a>
+          <p class="footer-tagline">
+            Curating beauty in the everyday.<br />
+            Designed to last. Made to inspire.
+          </p>
+          <!-- Social icons -->
+          <div class="social-links mt-3">
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="Pinterest">
+              <i class="bi bi-pinterest"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="TikTok">
+              <i class="bi bi-tiktok"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div class="col-6 col-lg-2 col-md-3">
+          <h5 class="footer-heading">Shop</h5>
+          <ul class="footer-links">
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Footwear</a></li>
+            <li><a href="#">Bags</a></li>
+            <li><a href="#">Jewelry</a></li>
+          </ul>
+        </div>
+
+        <!-- Company links -->
+        <div class="col-6 col-lg-2 col-md-3">
+          <h5 class="footer-heading">Company</h5>
+          <ul class="footer-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Affiliates</a></li>
+          </ul>
+        </div>
+
+        <!-- Support links -->
+        <div class="col-6 col-lg-2 col-md-3">
+          <h5 class="footer-heading">Support</h5>
+          <ul class="footer-links">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Size Guide</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact info -->
+        <div class="col-6 col-lg-2 col-md-3">
+          <h5 class="footer-heading">Contact</h5>
+          <ul class="footer-links">
+            <li>
+              <i class="bi bi-envelope me-2"></i>
+              hello@lumiere.shop
+            </li>
+            <li>
+              <i class="bi bi-telephone me-2"></i>
+              +1 (800) 123-4567
+            </li>
+            <li>
+              <i class="bi bi-geo-alt me-2"></i>
+              New York, NY 10001
+            </li>
+          </ul>
+        </div>
+
+      </div><!-- /row -->
+
+      <!-- Payment methods + copyright -->
+      <div class="footer-bottom mt-5 pt-3">
+        <div class="row align-items-center g-3">
+          <div class="col-md-6">
+            <p class="copyright mb-0">
+              &copy; 2025 LUMIÈRE. All rights reserved.
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <!-- Payment icons using Bootstrap Icons -->
+            <div class="payment-icons">
+              <i class="bi bi-credit-card" title="Credit Card"></i>
+              <i class="bi bi-paypal" title="PayPal"></i>
+              <i class="bi bi-apple" title="Apple Pay"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       BACK TO TOP BUTTON
+  ============================================================ -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+
+  <!-- Bootstrap 5 JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+  <!-- Custom Scripts -->
+  <script>
+    /* ── Navbar scroll effect ── */
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    /* ── Back-to-top button ── */
+    const btt = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      btt.classList.toggle('visible', window.scrollY > 400);
+    });
+    btt.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    /* ── Newsletter subscribe handler ── */
+    function handleSubscribe(e) {
+      e.preventDefault();
+      const input = e.target.querySelector('input');
+      const btn   = e.target.querySelector('button');
+      btn.textContent  = '✓ Subscribed!';
+      btn.disabled     = true;
+      input.disabled   = true;
+    }
+
+    /* ── Product card entrance animation on scroll ── */
+    const cards = document.querySelectorAll('.product-card');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => entry.target.classList.add('visible'), i * 80);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    cards.forEach(card => observer.observe(card));
+  </script>
+
+</body>
+</html>
